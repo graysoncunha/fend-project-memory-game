@@ -37,13 +37,23 @@ restart = document.querySelector('.restart');
     matchCards = [];
  }
 
- function resetCards() {
-    deck = document.querySelector('.deck');
-    cards = deck.children;
+ function restartDeck() {
+    removeMatchElementStyle();
+    init();
+}
+
+ function removeMatchElementStyle() {
+    var openElementsDOM = document.getElementsByClassName('match');
+
+    for (let i = openElementsDOM.length -1; i >= 0; i--) {
+       openElementsDOM[i].classList.remove('match');
+    }
+
+    cleanArrayOpenCards();
  }
 
  document.addEventListener('DOMContentLoaded', init);
- restart.addEventListener('click', init);
+ restart.addEventListener('click', restartDeck);
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
