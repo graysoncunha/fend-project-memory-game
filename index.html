@@ -22,7 +22,10 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+            <span class="moves">0</span> Moves
+            
+            <div class="timer">
+            </div>
 
             <div class="restart">
         		<i class="fa fa-repeat"></i>
@@ -79,6 +82,24 @@
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Parabéns </h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Você ganhou é um vencedor!
+                </div>
+                <div class="content-2">
+                    <p>Você fez <span id=finalMove> </span> moves </p>
+                    <p>em <span id=totalTime> </span> </p>
+                    <p>Estrelas:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Jogar denovo? </a>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="js/app.js"></script>
